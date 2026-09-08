@@ -6,7 +6,7 @@ A mobile-friendly learning companion that captures new study topics and gotchas,
 
 ## Exploration documents
 
-- [Mobile interface decision](mobile-interface.md) — recommended capture experience, security model, alternatives, and first-build slices.
+- [Mobile interface](mobile-interface.md) - index for the [ChatGPT POC](poc.md) and [dedicated Android application](dedicated-app.md).
 
 ## Problem
 
@@ -98,15 +98,14 @@ These are working concepts, not a finalized schema:
 - There is only one primary learning topic at a time.
 - New epiphanies and lessons enter the gotchas inbox first.
 - Monthly review covers the previous month's learning and produces active recall or practical work.
-- Start with a long-press ChatGPT POC: a special phrase invokes capture, automatic classification, and a GitHub pull request without requiring the user to name the category.
+- Start with a long-press ChatGPT POC: dictate one short `Log this:` message to a private capture GPT in text mode, then classify it and create a GitHub pull request without requiring the user to name the category.
 - Build a dedicated native Android app launched from the lock-screen Quick Corner only after the POC validates the workflow; it stores each capture locally before synchronizing to GitHub.
 - This seed remains in `EXPLORING/` until the interfaces, prioritization behavior, storage model, and first-version boundary are finalized.
 
 ## Open questions
 
-- What exact ChatGPT skill or integration configuration can create the POC pull request from the voice flow?
-- Should voice capture be required in the first version, or is mobile text entry sufficient initially?
-- What POC accuracy and weekly usage threshold justifies building the dedicated Android app?
+- Can the private capture GPT with a configured Action be opened quickly from the ChatGPT mobile experience after the side-button launch?
+- Is Android dictation accurate enough for the short `Log this:` capture format?
 - Which signals determine priority, and how should their relative weight be controlled?
 - What does “complete” mean for a learning topic, and can a topic be paused or split into smaller topics?
 - How should prerequisites and relationships between topics be represented?
@@ -120,7 +119,7 @@ These are working concepts, not a finalized schema:
 - [x] The initial problem and intended user are identified.
 - [x] The main idea-capture, focus, gotcha, and monthly-review workflows are described.
 - [x] The POC and post-POC mobile interface paths are chosen.
-- [x] The POC integration contract with `personal-notes` is decided: classify a capture and create a pull request.
+- [x] The POC integration contract with `personal-notes` is decided: a GPT Action calls a backend that classifies a short capture and creates a pull request.
 - [ ] The prioritization rules and user overrides are defined.
 - [ ] Topic lifecycle and completion rules are defined.
 - [ ] Monthly review generation and scheduling behavior are defined.
