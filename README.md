@@ -72,4 +72,12 @@ personal-notes/
 - Remove a ready seed only after its finalized scope has been safely transferred to both its dedicated repository and Linear.
 - When the gotchas inbox becomes large enough, move related entries into thematic files inside that folder.
 
+## GitHub synchronization
+
+Changes are committed locally first. The Windows task **Personal Notes GitHub Sync** runs [`scripts/sync-to-github.ps1`](scripts/sync-to-github.ps1) once per hour to stage local changes, create a timestamped commit when necessary, and push `main` to GitHub.
+
+- The sync never force-pushes and does not try to resolve remote conflicts automatically.
+- If someone changes the GitHub repository directly, the scheduled push may fail safely until the local branch is reconciled.
+- Its local activity log is stored outside this repository at `%LOCALAPPDATA%\PersonalNotesSync\sync.log`.
+
 The repository intentionally starts with a simple Markdown-only structure. Topic ranking and further organization can be added as the collection grows.
