@@ -4,6 +4,10 @@
 
 A mobile-friendly learning companion that captures new study topics and gotchas, protects focus on one active topic, and turns each month's learning into review questions or a small test project.
 
+## Exploration documents
+
+- [Mobile interface decision](mobile-interface.md) — recommended capture experience, security model, alternatives, and first-build slices.
+
 ## Problem
 
 New technologies and ideas often appear faster than they can be learned. Capturing them is useful, but immediately switching to every new topic creates distraction and large jumps between unrelated subjects. At the same time, useful epiphanies and gotchas can be lost if recording them requires too much effort.
@@ -94,6 +98,8 @@ These are working concepts, not a finalized schema:
 - There is only one primary learning topic at a time.
 - New epiphanies and lessons enter the gotchas inbox first.
 - Monthly review covers the previous month's learning and produces active recall or practical work.
+- Use ChatGPT from the side button for extended brainstorming and an installable Learning Tracker Quick Capture surface for dependable voice-to-repository capture.
+- Keep the repository Markdown files as the first-version source of truth; the tracker writes small, reviewed Markdown additions rather than creating a separate data store.
 - This seed remains in `EXPLORING/` until the interfaces, prioritization behavior, storage model, and first-version boundary are finalized.
 
 ## Open questions
@@ -113,8 +119,8 @@ These are working concepts, not a finalized schema:
 
 - [x] The initial problem and intended user are identified.
 - [x] The main idea-capture, focus, gotcha, and monthly-review workflows are described.
-- [ ] The first mobile interface and input methods are chosen.
-- [ ] The source of truth and integration with `personal-notes` are decided.
+- [x] The first mobile interface and input methods are chosen.
+- [x] The first-version source of truth and integration with `personal-notes` are decided.
 - [ ] The prioritization rules and user overrides are defined.
 - [ ] Topic lifecycle and completion rules are defined.
 - [ ] Monthly review generation and scheduling behavior are defined.
