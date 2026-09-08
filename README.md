@@ -6,7 +6,8 @@ This repository is a home for the things I want to study, useful lessons I pick 
 
 - [`STUDY.md`](STUDY.md) records my current learning focus and the topics I want to explore next.
 - [`IDEAS.md`](IDEAS.md) is the inbox for every plausible project idea, including rough or incomplete ones.
-- [`project-seeds/`](project-seeds/) contains active brainstorming for ideas I choose to explore.
+- [`project-seeds/EXPLORING/`](project-seeds/EXPLORING/) contains ideas currently being brainstormed and scoped.
+- [`project-seeds/READY-TO-BUILD/`](project-seeds/READY-TO-BUILD/) contains fully scoped ideas waiting to be transferred to Linear and a dedicated repository.
 - [`gotchas/`](gotchas/) is the entry point for newly discovered lessons, surprises, and pitfalls.
 
 ## Project idea workflow
@@ -16,27 +17,30 @@ flowchart TD
     A[New project idea] --> B[Capture it in IDEAS.md]
     B --> C{Worth exploring now?}
     C -- Not yet --> B
-    C -- Yes --> D[Create project-seeds/project-name/]
-    D --> E[Brain-dump and brainstorm with AI]
-    E --> F[Research, question assumptions, and narrow scope]
-    F --> G{Is the scope clear and buildable?}
-    G -- No --> E
-    G -- Yes --> H[Set seed status to READY TO BUILD]
-    H --> I[Create a dedicated GitHub repository]
-    I --> J[Give the finalized seed to Linear]
-    J --> K[Create the Linear project and tickets]
-    K --> L[Implement and ship in the dedicated repository]
+    C -- Yes --> D[Remove idea from IDEAS.md]
+    D --> E[Create project-seeds/EXPLORING/project-name/]
+    E --> F[Brain-dump and brainstorm with AI]
+    F --> G[Research, question assumptions, and narrow scope]
+    G --> H{Is the scope clear and buildable?}
+    H -- No --> F
+    H -- Yes --> I[Move seed to project-seeds/READY-TO-BUILD/]
+    I --> J[Create a dedicated GitHub repository]
+    J --> K[Transfer finalized scope to the repository and Linear]
+    K --> L[Create the Linear project and tickets]
+    L --> M[Remove seed from READY-TO-BUILD]
+    M --> N[Implement and ship in the dedicated repository]
 ```
 
 ### Using the workflow
 
 1. Capture an idea immediately in `IDEAS.md`. Do not wait for it to be polished.
-2. When an idea deserves focused exploration, create a lowercase, hyphenated folder under `project-seeds/`, such as `project-seeds/offline-reading-list/`.
-3. Add a `README.md` to that folder using the seed template in [`project-seeds/README.md`](project-seeds/README.md). Keep AI discussions, raw notes, research, decisions, and scope drafts together in the seed folder.
+2. When brainstorming begins, remove the idea from `IDEAS.md` and create a lowercase, hyphenated folder under `project-seeds/EXPLORING/`, such as `project-seeds/EXPLORING/offline-reading-list/`.
+3. Add a `README.md` using the seed template in [`project-seeds/README.md`](project-seeds/README.md). Keep AI discussions, raw notes, research, decisions, and scope drafts together in that folder.
 4. Refine the seed until its problem, audience, boundaries, and first version are unambiguous.
-5. Change the seed's status to `READY TO BUILD` only after completing its readiness checklist.
-6. Create a dedicated repository for implementation. Give Linear the finalized seed so it can become a project with actionable tickets.
-7. Keep implementation and subsequent changes in the dedicated repository. This repository remains the idea, learning, and early-thinking workspace.
+5. After completing the readiness checklist, move the entire seed folder from `EXPLORING/` to `READY-TO-BUILD/`.
+6. Create a dedicated repository, transfer the finalized scope into it, and give that scope to Linear so it can become a project with actionable tickets.
+7. After verifying the scope exists in the dedicated repository and Linear, remove the seed folder from `READY-TO-BUILD/`.
+8. Keep implementation and all subsequent changes in the dedicated repository. Git history preserves the seed's earlier development in this repository.
 
 ## Repository map
 
@@ -49,17 +53,23 @@ personal-notes/
 │   └── README.md
 └── project-seeds/
     ├── README.md
-    └── project-name/       # Created only when an idea is actively explored
-        ├── README.md       # Status, scope, decisions, and readiness checklist
-        └── notes.md        # Optional raw notes or AI discussion summaries
+    ├── EXPLORING/
+    │   ├── README.md
+    │   └── project-name/
+    │       ├── README.md   # Scope, decisions, and readiness checklist
+    │       └── notes.md    # Optional brain dumps or AI discussion summaries
+    └── READY-TO-BUILD/
+        ├── README.md
+        └── project-name/   # Fully scoped and awaiting external handoff
 ```
 
 ## Maintenance rules
 
-- Keep uncultivated ideas in `IDEAS.md`; do not create a seed folder for every passing thought.
-- Link an active idea in `IDEAS.md` to its seed folder so its current state is easy to find.
+- Keep uncultivated ideas only in `IDEAS.md`; do not create a seed folder for every passing thought.
+- An idea must exist in exactly one active location: `IDEAS.md`, `EXPLORING/`, or `READY-TO-BUILD/`.
 - Keep each project seed self-contained and record conclusions from AI conversations, not just chat transcripts.
-- Treat `READY TO BUILD` as a deliberate handoff state, not a general sign of enthusiasm.
+- Move a seed to `READY-TO-BUILD/` only when its scope and checklist are complete.
+- Remove a ready seed only after its finalized scope has been safely transferred to both its dedicated repository and Linear.
 - When the gotchas inbox becomes large enough, move related entries into thematic files inside that folder.
 
 The repository intentionally starts with a simple Markdown-only structure. Topic ranking and further organization can be added as the collection grows.
