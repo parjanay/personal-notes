@@ -6,6 +6,8 @@ Test whether one short spoken thought can become a correctly classified GitHub p
 
 See [POC implementation tasks](poc-tasks.md) for the ordered build checklist.
 
+See [Custom GPT implementation](custom-gpt-implementation.md) for the private GPT configuration and Action schema.
+
 ## Voice invocation: the workable path
 
 Official OpenAI documentation states that custom actions are unavailable in ChatGPT Voice conversations with GPTs. A phrase in a normal ChatGPT Voice conversation therefore cannot directly invoke a custom GPT Action or create a GitHub pull request. [ChatGPT Voice](https://help.openai.com/en/articles/20001274)
