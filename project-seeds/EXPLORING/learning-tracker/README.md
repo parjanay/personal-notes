@@ -98,15 +98,15 @@ These are working concepts, not a finalized schema:
 - There is only one primary learning topic at a time.
 - New epiphanies and lessons enter the gotchas inbox first.
 - Monthly review covers the previous month's learning and produces active recall or practical work.
-- Use ChatGPT from the side button for extended brainstorming and an installable Learning Tracker Quick Capture surface for dependable voice-to-repository capture.
-- Keep the repository Markdown files as the first-version source of truth; the tracker writes small, reviewed Markdown additions rather than creating a separate data store.
+- Start with a long-press ChatGPT POC: a special phrase invokes capture, automatic classification, and a GitHub pull request without requiring the user to name the category.
+- Build a dedicated native Android app launched from the lock-screen Quick Corner only after the POC validates the workflow; it stores each capture locally before synchronizing to GitHub.
 - This seed remains in `EXPLORING/` until the interfaces, prioritization behavior, storage model, and first-version boundary are finalized.
 
 ## Open questions
 
-- What should the first mobile interface be: a responsive web app, native app, chat bot, or phone shortcut?
+- What exact ChatGPT skill or integration configuration can create the POC pull request from the voice flow?
 - Should voice capture be required in the first version, or is mobile text entry sufficient initially?
-- Should Markdown files in `personal-notes` be the source of truth, an export target, or only an inspiration for the app's structure?
+- What POC accuracy and weekly usage threshold justifies building the dedicated Android app?
 - Which signals determine priority, and how should their relative weight be controlled?
 - What does “complete” mean for a learning topic, and can a topic be paused or split into smaller topics?
 - How should prerequisites and relationships between topics be represented?
@@ -119,8 +119,8 @@ These are working concepts, not a finalized schema:
 
 - [x] The initial problem and intended user are identified.
 - [x] The main idea-capture, focus, gotcha, and monthly-review workflows are described.
-- [x] The first mobile interface and input methods are chosen.
-- [x] The first-version source of truth and integration with `personal-notes` are decided.
+- [x] The POC and post-POC mobile interface paths are chosen.
+- [x] The POC integration contract with `personal-notes` is decided: classify a capture and create a pull request.
 - [ ] The prioritization rules and user overrides are defined.
 - [ ] Topic lifecycle and completion rules are defined.
 - [ ] Monthly review generation and scheduling behavior are defined.
