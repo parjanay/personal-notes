@@ -1,5 +1,7 @@
 # ChatGPT POC Implementation Tasks
 
+> **Status:** ~~Work through these tasks in order.~~ **Cancelled.** Do not implement this POC. The active implementation plan is the [native Android application](dedicated-app.md).
+
 Work through these tasks in order. Do not build the backend until Task 1 confirms that your ChatGPT account can actually host the required capture action.
 
 ```mermaid

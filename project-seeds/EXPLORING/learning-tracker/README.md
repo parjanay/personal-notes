@@ -6,7 +6,7 @@ A mobile-friendly learning companion that captures new study topics and gotchas,
 
 ## Exploration documents
 
-- [Mobile interface](mobile-interface.md) - index for the [ChatGPT POC](poc.md) and [dedicated Android application](dedicated-app.md).
+- [Mobile interface](mobile-interface.md) - ~~index for the [ChatGPT POC](poc.md) and [dedicated Android application](dedicated-app.md)~~ index for the **active [native Android application](dedicated-app.md)** and archived POC notes.
 
 ## Problem
 
@@ -98,14 +98,15 @@ These are working concepts, not a finalized schema:
 - There is only one primary learning topic at a time.
 - New epiphanies and lessons enter the gotchas inbox first.
 - Monthly review covers the previous month's learning and produces active recall or practical work.
-- Start with a long-press ChatGPT POC: dictate one short `Log this:` message to a private capture GPT in text mode, then classify it and create a GitHub pull request without requiring the user to name the category.
-- Build a dedicated native Android app launched from the lock-screen Quick Corner only after the POC validates the workflow; it stores each capture locally before synchronizing to GitHub.
+- ~~Start with a long-press ChatGPT POC: dictate one short `Log this:` message to a private capture GPT in text mode, then classify it and create a GitHub pull request without requiring the user to name the category.~~
+- ~~Build a dedicated native Android app launched from the lock-screen Quick Corner only after the POC validates the workflow; it stores each capture locally before synchronizing to GitHub.~~
+- **Build the dedicated native Android app now.** It will launch from the lock-screen Quick Corner, store captures locally first, infer the capture category, and synchronize through reviewable GitHub pull requests.
 - This seed remains in `EXPLORING/` until the interfaces, prioritization behavior, storage model, and first-version boundary are finalized.
 
 ## Open questions
 
-- Can the private capture GPT with a configured Action be opened quickly from the ChatGPT mobile experience after the side-button launch?
-- Is Android dictation accurate enough for the short `Log this:` capture format?
+- ~~Can the private capture GPT with a configured Action be opened quickly from the ChatGPT mobile experience after the side-button launch?~~ **No longer relevant; the ChatGPT POC is cancelled.**
+- ~~Is Android dictation accurate enough for the short `Log this:` capture format?~~ **No longer relevant; native in-app capture will be tested instead.**
 - Which signals determine priority, and how should their relative weight be controlled?
 - What does “complete” mean for a learning topic, and can a topic be paused or split into smaller topics?
 - How should prerequisites and relationships between topics be represented?
@@ -118,8 +119,8 @@ These are working concepts, not a finalized schema:
 
 - [x] The initial problem and intended user are identified.
 - [x] The main idea-capture, focus, gotcha, and monthly-review workflows are described.
-- [x] The POC and post-POC mobile interface paths are chosen.
-- [x] The POC integration contract with `personal-notes` is decided: a GPT Action calls a backend that classifies a short capture and creates a pull request.
+- [x] ~~The POC and post-POC mobile interface paths are chosen.~~ The POC is cancelled; native Android is the active path.
+- [x] ~~The POC integration contract with `personal-notes` is decided: a GPT Action calls a backend that classifies a short capture and creates a pull request.~~ The native app will call an authenticated backend that classifies a short capture and creates a pull request.
 - [ ] The prioritization rules and user overrides are defined.
 - [ ] Topic lifecycle and completion rules are defined.
 - [ ] Monthly review generation and scheduling behavior are defined.
@@ -127,9 +128,9 @@ These are working concepts, not a finalized schema:
 - [ ] In-scope and out-of-scope boundaries for the first build are finalized.
 - [ ] Important open questions are resolved.
 - [ ] The work can be translated into Linear tickets.
-- [ ] A dedicated repository name has been chosen.
+- [ ] A dedicated repository name has been chosen and created.
 
 ## Handoff
 
 - **Dedicated repository:** Not created
-- **Linear project:** Not created
+- **Linear project:** ~~Not created~~ [Learning Tracker](https://linear.app/parjanay-sharma/project/learning-tracker-517e1540f6cc)

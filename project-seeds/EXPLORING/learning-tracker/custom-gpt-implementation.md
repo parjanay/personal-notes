@@ -1,5 +1,7 @@
 # Personal Notes Capture GPT Implementation
 
+> **Status:** ~~Active POC configuration guide.~~ **Cancelled.** The native Android app is now the sole implementation path. This guide is retained only for the original exploration history.
+
 This guide specifies the private ChatGPT custom GPT used by the [POC](poc.md). It does not create the GPT, backend, GitHub App, or any credentials.
 
 ## Purpose

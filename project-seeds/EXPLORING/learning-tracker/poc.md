@@ -1,5 +1,7 @@
 # ChatGPT Capture POC
 
+> **Status:** ~~Active implementation path.~~ **Cancelled.** Build the [native Android application](dedicated-app.md) instead. This document is retained only as an exploration record; do not implement its tasks.
+
 ## Goal
 
 Test whether one short spoken thought can become a correctly classified GitHub pull request with minimal friction. This POC is not a brainstorming workflow.
